@@ -1,0 +1,5 @@
+{"content_length":"3","level":"http","message":"incoming-request","method":"GET","response_time":3.096,"service":"auth","status":200,"url":"/"}
+{"content_length":150,"level":"http","message":"incoming-request","method":"GET","response_time":2.014,"service":"auth","status":404,"url":"/favicon.ico"}
+{"content_length":145,"level":"http","message":"incoming-request","method":"GET","response_time":2.018,"service":"auth","status":404,"url":"/deneme"}
+{"content_length":145,"device":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36","level":"http","message":"incoming-request","method":"GET","response_time":3.432,"service":"auth","status":404,"url":"/deneme"}
+{"content_length":145,"device":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36","level":"http","message":"incoming-request","method":"GET","remote_addr":"::1","response_time":3.051,"service":"auth","status":404,"url":"/deneme"}
