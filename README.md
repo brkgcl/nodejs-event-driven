@@ -66,3 +66,35 @@
 ![session](https://github.com/brkgcl/nodejs-event-driven/assets/54892419/3aadaa88-998a-4c74-be48-0baf4255bd6a)
 access_token (expires:30m) ve reflesh_token (expires:60m) 
 ![redis](https://github.com/brkgcl/nodejs-event-driven/assets/54892419/f9cebc8d-1ed8-4121-b365-e07b5a9b2287)
+
+
+## Geliştirmeler ve eksiklikler
+
+- **Genel ve Kütüphane düzenlemeleri**
+ 	- log dosyaları belirli bir boyuta ulaşınca ziplenerek saklanmalı
+ 	- uygulama genelinde daha çok logger kullanmalıyım
+ 	- log larda hatanın kaynağını daha iyi görebilmek için action fieldı eklenmiştim ama error ve bazı durumlarda undifined dönüyor. Logger classına farklı contructurlar opsiyonları eklemeliyim
+ 	- logları monitoring sistemde kullanaılabilecek şekilde düzenlemeliyim
+ 	- email template validasyon funtionu hatalı olduğu için devre dışı bırakıldı o revize edilmeli
+ 	- uygulama içi açıklama satırlarları kullanılmalı
+ 	- error class ına isOperational,path , errorCode eklenmeli ve bunlar için type oluşturulmalı.
+ 	- email templatelari oluşturulmalı ve doğrulama,sifre yenileme urlleri güncellenmeli
+ 	- google ve facebook  callbackleri güncellenmeli (window.close() kullanılmalı çünkü frontend de şuanda (window.open('','_self')) olarak çağırılıyor onu '_blank' olarak güncelleyerek authentication işlemini yeni sekmede yapmalıyım. Ve bilgileri yeni bir route (yada socket.io vb.) kullanarak göndermeliyim)
+
+- **Frontend düzenlenmeleri**
+	- landing page ayrı bir service olarak oluşturulmalıyım
+	- İngilizce ve Tükçe karışık olarak kullanılmış dil seçenekleri eklenerek bu durum düzeltilmeliyim
+ 	- Responsive tasarım yapılmalı
+ 	- Daha temiz bir code yapısı için componentleri bölmeliyim.
+ 	- email doğrulama, bilgi güncelleme sayfaları oluşturmalıyım
+ 	- izin (email doğruluğu) kontrölü yapmalıyım
+ - **Deployment ve Monitoring**
+ 	- CI/CD piplene oluşturulmalı
+ 	- testler  yazılmalı
+ 	- ngnix configurasyonları düzenlenmeli
+ 	- Signed self ssl yerine Google ve Facebook auth un kabul ettiği ssl kullanılmalı
+ 	- docker-compose yerine kubernetes kullanımı araştırılmalıyım
+ 	- Uygulama için güvenlik ve performs izleme sistemleri oluşturulmalı
+ 	- pm2 kullanımdaki ve monitoringindeki hatalar düzeltilmeli ve tekrar devreye alınmalı
+
+    
